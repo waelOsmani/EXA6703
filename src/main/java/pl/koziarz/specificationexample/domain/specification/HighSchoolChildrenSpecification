@@ -1,0 +1,9 @@
+package pl.koziarz.specificationexample.domain.specification;
+
+public class HighSchoolChildrenSpecification extends ChildAgeBetweenInclSpecification {
+	
+	public HighSchoolChildrenSpecification() {
+		super(16,19);
+	}
+
+}
