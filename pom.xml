@@ -7,7 +7,7 @@
 	<description>Example project for implementation of Specification</description>
 
 	<build>
-		<plugins>
+	  <plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
@@ -17,27 +17,24 @@
 			</plugin>    
 			
 
-    <plugin>
+    		<plugin>
                   <!-- Build an executable JAR -->
-                        <groupId>org.apache.maven.plugins</groupId>
-                              <artifactId>maven-jar-plugin</artifactId>
-                                    <version>3.1.0</version>
-                                          <configuration>
-                    <archive>
-                    <manifest>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.1.0</version>
+                    <configuration>
+                      <archive>
+                        <manifest>
                             <!-- <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix> -->
                             <mainClass>pl.koziarz.specificationexample.domain.KindergartenApp
                             </mainClass>
-                    </manifest>
-                    </archive>
+                        </manifest>
+                      </archive>
                     </configuration>
-     </plugin>
+     		</plugin>
 			
 			
-		</plugins>
-	</build>
-
 
 	<!-- pour executer avec mvn -q exec:java -->
 	<plugin>
@@ -56,4 +53,7 @@
 	</configuration>
 	</plugin>
 
+			
+	</plugins>
+  </build>
 </project>
