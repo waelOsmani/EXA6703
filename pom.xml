@@ -15,6 +15,45 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>    
+			
+
+    <plugin>
+                  <!-- Build an executable JAR -->
+                        <groupId>org.apache.maven.plugins</groupId>
+                              <artifactId>maven-jar-plugin</artifactId>
+                                    <version>3.1.0</version>
+                                          <configuration>
+                    <archive>
+                    <manifest>
+                            <!-- <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix> -->
+                            <mainClass>pl.koziarz.specificationexample.domain.KindergartenApp
+                            </mainClass>
+                    </manifest>
+                    </archive>
+                    </configuration>
+     </plugin>
+			
+			
 		</plugins>
 	</build>
+
+
+	<!-- pour executer avec mvn -q exec:java -->
+	<plugin>
+	<groupId>org.codehaus.mojo</groupId>
+	<artifactId>exec-maven-plugin</artifactId>
+	<version>1.1</version>
+	<executions>
+	<execution>
+	<goals>
+	<goal>exec</goal>
+	</goals>
+	</execution>
+	</executions>
+	<configuration>
+		<mainClass>pl.koziarz.specificationexample.domain.KindergartenApp</mainClass>
+	</configuration>
+	</plugin>
+
 </project>
