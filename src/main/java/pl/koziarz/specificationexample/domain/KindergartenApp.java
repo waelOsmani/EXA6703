@@ -11,6 +11,7 @@ import pl.koziarz.specificationexample.domain.specification.ChildLikesSpecifiedT
 import pl.koziarz.specificationexample.domain.specification.ChildNameSpecification;
 import pl.koziarz.specificationexample.domain.specification.SchoolChildrenSpecification;
 import pl.koziarz.specificationexample.domain.specification.ToyColorSpecification;
+import pl.koziarz.specificationexample.domain.specification.HighSchoolChildrenSpecification;
 
 public class KindergartenApp {
 
@@ -84,6 +85,13 @@ public class KindergartenApp {
 		Specification<Child> spec_schoolchildren = new SchoolChildrenSpecification(); 
 		System.out.println("\nSchool Children");
 		printSpecified(children, spec_schoolchildren);
+		
+		/**
+		 * Let's find all children, who are going to High school (in Mooldova - from 16 years old to 19 y.o.)
+		 */
+		Specification<Child> spec_highschoolchildren = new HighSchoolChildrenSpecification(); 
+		System.out.println("\nHighSchool Children");
+		printSpecified(children, spec_highschoolchildren);
 	}
 	
 	static <T> void printSpecified(Set<T> set, Specification<T> spec) {
